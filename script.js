@@ -64,9 +64,9 @@ function reset() {
     player_score_span.innerHTML = player_score;
     computer_score_span.innerHTML = computer_score;
     computerHand.src = `img/Rock1.png`; 
-    playerHand.removeAttribute('class',`fa fa-hand-paper`);
-    playerHand.removeAttribute('class',`fa fa-hand-peace`);
-    playerHand.setAttribute('class',`fa fa-hand-rock`);
+    playerHand.removeAttribute('class',`fas fa-hand-paper`);
+    playerHand.removeAttribute('class',`fas fa-hand-peace`);
+    playerHand.setAttribute('class',`fas fa-hand-rock`);
     playerHand.style.color = "#ffde34";
     document.f1.first_name1.value="";
     document.f2.first_name2.value="";
@@ -123,8 +123,8 @@ function game(playerChoice){
     const computerChoice=getComputerChoice();
         setTimeout(() => {   
           //Update Images
-          playerHand.removeAttribute('class','fa fa-hand-rock');
-          playerHand.setAttribute('class',`fa fa-hand-${convert1(playerChoice)}`);
+          playerHand.removeAttribute('class','fas fa-hand-rock');
+          playerHand.setAttribute('class',`fas fa-hand-${convert1(playerChoice)}`);
           computerHand.src = `img/${convert2(computerChoice)}1.png`; 
         switch(playerChoice + computerChoice){
         case "pr":
@@ -157,9 +157,9 @@ function main(){
         if(clickActive){
             clickActive=0;
             computerHand.src = `img/Rock1.png`; 
-            playerHand.removeAttribute('class',`fa fa-hand-paper`);
-            playerHand.removeAttribute('class',`fa fa-hand-peace`);
-            playerHand.setAttribute('class',`fa fa-hand-rock`);   
+            playerHand.removeAttribute('class',`fas fa-hand-paper`);
+            playerHand.removeAttribute('class',`fas fa-hand-peace`);
+            playerHand.setAttribute('class',`fas fa-hand-rock`);   
             game("r"); 
             setTimeout(() => {   
                 clickActive=1;
@@ -170,9 +170,9 @@ function main(){
         if(clickActive){
             clickActive=0;
             computerHand.src = `img/Rock1.png`; 
-            playerHand.removeAttribute('class',`fa fa-hand-paper`);
-            playerHand.removeAttribute('class',`fa fa-hand-peace`);
-            playerHand.setAttribute('class',`fa fa-hand-rock`);
+            playerHand.removeAttribute('class',`fas fa-hand-paper`);
+            playerHand.removeAttribute('class',`fas fa-hand-peace`);
+            playerHand.setAttribute('class',`fas fa-hand-rock`);
             game("p");  
             setTimeout(() => {   
                 clickActive=1;
@@ -183,9 +183,9 @@ function main(){
         if(clickActive){
             clickActive=0;
             computerHand.src = `img/Rock1.png`; 
-            playerHand.removeAttribute('class',`fa fa-hand-paper`);
-            playerHand.removeAttribute('class',`fa fa-hand-peace`);        
-            playerHand.setAttribute('class',`fa fa-hand-rock`);
+            playerHand.removeAttribute('class',`fas fa-hand-paper`);
+            playerHand.removeAttribute('class',`fas fa-hand-peace`);        
+            playerHand.setAttribute('class',`fas fa-hand-rock`);
             game("s");
             setTimeout(() => {   
                 clickActive=1;
