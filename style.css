@@ -1,0 +1,394 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 Jun, 2021, 8:34:30 PM
+    Author     : KIIT
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
+
+.header{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.heading-left{
+    width: 270px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.second-line{
+    display: flex;
+    justify-content: space-around;
+}
+.show-later{
+    display: none;
+}
+.heading-left img{
+    width: 50%;
+    height: 100%;
+}
+
+.header .heading{
+    font-size: 150px;
+    font-weight: 500;
+    font-family: 'Stint Ultra Condensed', cursive;
+    background: url(img/hand_bg1.jpg) center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: red;
+    text-align: center;
+}
+.heading-right{
+    display: flex;
+    flex-direction: column;
+}
+#reset{
+    background: greenyellow;
+    text-align: center;
+    padding: 0 25px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px rgba(0,0,0,0.7);
+    border: 2px solid black;
+    transition: all 1s ease;
+}
+#reset p{
+    font-size: 23px;
+    margin: 5px 5px;
+}
+#reset:hover{
+    background: green;
+    color: white;
+    box-shadow: 0px 10px 50px rgba(0,255,0,0.7);
+}
+
+.inname{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid red;
+}
+input[type=button] {
+  background: darkred;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+input[type=button]:hover {
+    background: orangered;
+}
+
+.skin span{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.skin span:hover{
+    transform: scale(1.1);
+}
+
+.roll, .selections{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.selection{
+    font-size: 70px;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 5px solid orange;
+}
+
+.selections p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: -18px;
+    border-radius: 10px;
+    background: orange;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.selections div:hover{
+    transform: scale(1.15);
+}
+.selections div:hover .selection{
+    background-color: #ffde34;
+}
+
+#r,#p,#s{
+    display: flex;
+    flex-direction: column; 
+}
+
+.points{
+    display: flex;
+    flex-direction: column;
+}
+
+.points h1,.points span{
+    font-size: 30px;
+}
+
+.game{
+    background: url(img/bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+/*    height: 55vh;*/
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.result p{
+    font-size: 22px;
+}
+
+.hands{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hands i{
+    color: #ffde34;
+    font-size: 280px;
+}
+.hands .player-hand {
+    transform: rotate(90deg);
+}
+
+/*Shaking playerHand and computerHand*/
+@keyframes shakePlayer {
+  0%,25%,50%,75%,100% {
+    transform: rotateZ(90deg) translateX(0px);
+/*    transform: rotateY(180deg) translateY(0px);*/
+  }
+  15%,35%,65%,85% {
+    transform: rotateZ(90deg) translateX(-50px);
+    /*transform: rotateY(180deg) translateY(-50px);*/
+  }
+}
+
+@keyframes shakeComputer {
+  0%,25%,50%,75%,100% {
+    transform: translateY(0px);
+  }
+  15%,35%,65%,85% {
+    transform: translateY(-50px);
+  }
+}
+
+/*Display the playerHand in 90 degree rotated format*/
+#rock{
+    transform: rotate(90deg)
+}
+
+/*For Resposive Behaviour*/
+@media(max-width: 1300px){
+    .header .heading{
+        font-size: 130px;
+    }
+    #reset p{
+        font-size: 18px;
+    }
+    #reset{
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 1200px){
+    .header .heading-left{
+        display: none;
+    }
+    .header .heading-right{
+        display: none;
+    }
+    .header .heading{
+        width: 100%;
+    }
+    .show-later{
+        display: block;
+    }
+}
+
+@media(max-width: 700px){
+    .hands i{
+        font-size: 200px;
+    }
+    .hands img{
+        height: 250px;
+    }
+}
+
+@media(max-width: 650px){
+    .header .heading{
+        font-size: 100px;
+    }
+    .skin-tone h1{
+        font-size: 20px;
+    }
+    .points h1{
+        font-size:20px;
+    }
+}
+
+@media(max-width: 550px){
+    .header .heading{
+        font-size: 90px;
+    }
+    .skin-tone h1{
+        font-size: 20px;
+    }
+    .skin span{
+    height: 25px;
+    width: 25px;
+}
+    .selection{
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+}
+.selections p{
+    font-size: 20px;
+    margin-top: -15px;
+}
+    .hands i{
+        font-size: 170px;
+    }
+    .hands img{
+        height: 220px;
+    }
+
+}
+@media(max-width: 475px){
+    .header .heading{
+        font-size: 70px;
+    }
+    .skin-tone h1{
+        font-size: 17px;
+    }
+    .skin span{
+    height: 20px;
+    width: 20px;
+    }
+    .selection{
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    }
+    .selections p{
+        font-size: 15px;
+    }
+    .points h1{
+        font-size:15px;
+    }
+    .points span{
+        font-size:20px;
+    }
+    .hands i{
+        font-size: 130px;
+    }
+    .hands img{
+        height: 160px;
+    }
+}
+@media(max-width: 360px){
+    .header .heading{
+        font-size: 50px;
+    }
+    .heading-left img{
+        display: none;
+    }
+    .selection{
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    }
+    .selections p{
+        font-size: 12px;
+        margin-top: -10px;
+    }
+    .points h1{
+        font-size:10px;
+    }
+    .points span{
+        font-size:15px;
+    }
+    .hands i{
+        font-size: 80px;
+    }
+    .hands img{
+        height: 110px;
+    }
+    .result p{
+        font-size: 15px;
+    }
+    @keyframes shakePlayer {
+  0%,25%,50%,75%,100% {
+    transform: rotateZ(90deg) translateX(0px);
+/*    transform: rotateY(180deg) translateY(0px);*/
+  }
+  15%,35%,65%,85% {
+    transform: rotateZ(90deg) translateX(-30px);
+    /*transform: rotateY(180deg) translateY(-50px);*/
+  }
+}
+
+@keyframes shakeComputer {
+  0%,25%,50%,75%,100% {
+    transform: translateY(0px);
+  }
+  15%,35%,65%,85% {
+    transform: translateY(-30px);
+  }
+}
+}
+@media(max-width: 260px){
+    .header .heading{
+        font-size: 40px;
+    }
+    .skin-tone h1{
+        font-size: 15px;
+    }
+    .selection{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    }
+    .selections p{
+        font-size: 8px;
+        margin-top: -10px;
+    }
+    .points h1{
+        font-size:8px;
+    }
+    .points span{
+        font-size:12px;
+    }
+    .hands i{
+        font-size: 40px;
+    }
+    .hands img{
+        height: 50px;
+    }
+    .result p{
+        font-size: 10px;
+    }
+}

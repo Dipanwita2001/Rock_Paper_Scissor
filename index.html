@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rock Paper Scissor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+        <section class="header">
+            <div class="heading-left">
+            <img src="img/rps2.jpg" alt>
+            <div id="reset" onclick="reset()">
+                <p>R</p><p>E</p><p>S</p><p>E</p><p>T</p>
+            </div>
+            </div>
+            <div class="heading">
+                Rock-Paper-Scissor
+            </div>
+            <div class="heading-right">
+                <div class="inname">
+                    <form name="f1">
+                    <input type="text" placeholder="First Name" name="first_name1" value="" required/>
+                    <input type="button" id="sub" name="dump" value="Submit" onclick="dumping1()">
+                    </form>
+                </div>
+                <div class="skin-tone">
+                <h1>Choose your skin tone</h1>
+                <div class="skin">
+                    <span class="dot sc1" id="s1" style="background-color: #ecbcb4;"></span>
+                    <span class="dot sc1" id="s2" style="background-color: #d1a3a4;"></span>
+                    <span class="dot sc1" id="s3" style="background-color: #c58c85;"></span>
+                    <span class="dot sc1" id="s4" style="background-color: #a1665e;"></span>
+                    <span class="dot sc1" id="s5" style="background-color: #592f2a;"></span>
+                    <span class="dot sc1" id="s6" style="background-color: #503335;"></span>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="show-later">
+        <div class="second-line">
+            <div class="heading-left">
+            <img src="img/rps2.jpg" alt>
+            <div id="reset" onclick="reset()">
+                <p>R</p><p>E</p><p>S</p><p>E</p><p>T</p>
+            </div>
+            </div>
+                        <div class="heading-right">
+                <div class="inname">
+                    <form name="f2">
+                    <input type="text" placeholder="First Name" name="first_name2" value="" required/>
+                    <input type="button" id="sub" name="dump" value="Submit" onclick="dumping2()">
+                    </form>
+                </div>
+                <div class="skin-tone">
+                <h1>Choose your skin tone</h1>
+                <div class="skin">
+                    <span class="dot sc2" id="s1" style="background-color: #ecbcb4;"></span>
+                    <span class="dot sc2" id="s2" style="background-color: #d1a3a4;"></span>
+                    <span class="dot sc2" id="s3" style="background-color: #c58c85;"></span>
+                    <span class="dot sc2" id="s4" style="background-color: #a1665e;"></span>
+                    <span class="dot sc2" id="s5" style="background-color: #592f2a;"></span>
+                    <span class="dot sc2" id="s6" style="background-color: #503335;"></span>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <section class="roll">
+            <div class="points">
+                <div class="player-score">
+                    <h1>Player : </h1>
+                    <span id="player_score">0</span>
+                </div>
+            </div>
+            <div class="selections">
+                <div id="r"><button class="selection" data-selection="rock">✊</button><p>Rock</p></div>
+                <div id="p"><button class="selection" data-selection="paper">✋</button><p>Paper</p></div>
+                <div id="s"><button class="selection" data-selection="scissors">✌</button><p>Scissor</p></div>
+            </div>
+            <div class="points">
+                <div class="computer-score">
+                    <h1>Computer :</h1>
+                    <span id="computer_score">0</span>
+                </div>
+            </div>
+        </section>
+        <section class="game">
+            <div class="result">
+                <p></p>
+            </div>
+            <div class="hands">
+                <i class="fas fa-hand-rock player-hand" id="rock"></i>
+                <img class="computer-hand" src="img/Rock1.png" alt="" />
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
